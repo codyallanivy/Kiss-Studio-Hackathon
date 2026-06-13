@@ -1,0 +1,23 @@
+.env
+.venv/
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Local run state
+.playwright-cli/
+output/
+command-center/projects.json
+creative-track1/output/
+creative-track1/traces/
+foundry-track2/traces/*
+!foundry-track2/traces/.gitkeep
+foundry-track2/traces/preferences.jsonl
+
+# Generated media and verification debt from local demos
+**/PENDING_VERIFICATION.md
+**/ASSET_REFERENCES.md
+**/assets/*-v*.svg
+*.zip
