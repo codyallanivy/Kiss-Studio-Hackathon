@@ -19,6 +19,12 @@ import urllib.request
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 
+for stream in (sys.stdout, sys.stderr):
+    try:
+        stream.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(ROOT / "foundry-track2"))
@@ -688,6 +694,18 @@ def app_status_question(message: str) -> bool:
     ))
 
 
+def assistant_project_context_question(message: str) -> bool:
+    msg = (message or "").lower()
+    active = ACTIVE.lower()
+    return active in msg or any(term in msg for term in (
+        "this project", "my project", "active project", "current project",
+        "command center", "builder studio", "kiss", "scope", "todo",
+        "decision", "risk", "requirement", "feature", "asset", "gallery",
+        "dashboard", "website", "app", "repo", "repository", "file",
+        "memory", "vision", "verification", "build",
+    ))
+
+
 def app_status_context() -> str:
     foundry_on = CTX.model.mode.startswith("foundry:")
     return (
@@ -703,7 +721,14 @@ CTX.retrieve_iq = retrieve_iq
 
 
 def chat(message, file_context="", mode="project"):
-    grounding = retrieve_for_mode(message, mode)
+    if mode == "general":
+        mode = "assistant"
+    grounding = []
+    if mode == "assistant":
+        if assistant_project_context_question(message) and not app_status_question(message):
+            grounding = retrieve_for_mode(message, "project")
+    else:
+        grounding = retrieve_for_mode(message, mode)
     if file_context:
         # project-only grounding: drop chunks from other projects/domains so
         # e.g. a coffee brand never inherits fantasy-campaign flavor
@@ -711,8 +736,6 @@ def chat(message, file_context="", mode="project"):
         grounding = [{"citation": f"{ACTIVE} project files (live)",
                       "snippet": file_context[:1200]}] + own[:3]
     if mode == "assistant":
-        if app_status_question(message):
-            grounding = []
         # A real general assistant: answer ANY question from the model's own
         # knowledge. Project notes are optional context, attached only when they
         # actually match the active project — never forced into unrelated answers,
@@ -729,9 +752,15 @@ def chat(message, file_context="", mode="project"):
                  or "(no project notes apply — answer from general knowledge)")
         raw = CTX.model.complete(system, f"{app_status_context()}\n\nQUESTION: {message}\n\nOPTIONAL PROJECT NOTES:\n{notes}")
         if raw is None:
-            raw = ("(offline tier) General questions need a model tier — switch on "
-                   "Foundry or Ollama in the top bar. I can still answer questions "
-                   "about your active project offline.")
+            if app_status_question(message):
+                foundry_on = CTX.model.mode.startswith("foundry:")
+                raw = (f"(local status) Foundry/Azure model tier is {'ON' if foundry_on else 'OFF'}. "
+                       f"Active model tier: {CTX.model.mode}. "
+                       f"No Foundry tokens are being used while the active tier is {CTX.model.mode}.")
+            else:
+                raw = ("(offline tier) General questions need a model tier — switch on "
+                       "Foundry or Ollama in the top bar. I can still answer questions "
+                       "about your active project offline.")
         CTX.tracer.log(agent="Assistant", model=CTX.model.mode,
                        prompt={"system": "assistant", "user": message},
                        grounding=[g["citation"] for g in grounding],
@@ -1384,5 +1413,5 @@ class H(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    print("KISS Command Center → http://localhost:8765")
+    print("KISS Command Center -> http://localhost:8765")
     HTTPServer(("127.0.0.1", 8765), H).serve_forever()
