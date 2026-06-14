@@ -5,3 +5,4 @@
 - [ ] Confirm signup CTA copy is specific and not misleading.
 - [ ] Confirm parked ecommerce and loyalty ideas remain out of Tier 1.
 
+- [ ] 2026-06-13 | cover | cover-1.svg | unreviewed
