@@ -180,9 +180,16 @@ ACTIVE = next((p for p in ("creator-launch", "pizza-shop") if p in PROJECTS), ne
 
 try:
     from dotenv import load_dotenv
-    load_dotenv(T2 / ".env")
+    load_dotenv(T2 / ".env", override=True)
 except ImportError:
-    pass
+    env_file = T2 / ".env"
+    if env_file.exists():
+        for raw in env_file.read_text(encoding="utf-8").splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            os.environ[key.strip()] = value.strip().strip('"').strip("'")
 
 print("Booting KISS engine …")
 CTX = AgentContext(
