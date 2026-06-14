@@ -93,6 +93,12 @@
     font-size: 11px;
   }
 
+  button.demo-reveal {
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    box-shadow: 0 0 0 1px rgba(244, 185, 78, 0.22), 0 8px 20px rgba(0, 0, 0, 0.22);
+  }
+
   input,
   select,
   textarea {
@@ -1767,7 +1773,7 @@
   </nav>
 
   <div class="toolbar-actions">
-    <button class="small" onclick="location.href='/'" title="Back to the KISS Command Center dashboard">&larr; Command Center</button>
+    <button class="small primary demo-reveal" onclick="openCommandCenter()" title="Reveal the full KISS Command Center dashboard">Reveal Command Center</button>
     <label class="toggle" title="Show hidden advanced tools">
       <input id="expertToggle" type="checkbox" onchange="setExpert(this.checked)"> Expert
     </label>
@@ -2370,6 +2376,10 @@ function loadState() {
 
 function saveState() {
   localStorage.setItem("builder-studio-prototype", JSON.stringify(state));
+}
+
+function openCommandCenter() {
+  window.location.href = window.location.protocol === "file:" ? "index.html" : "/";
 }
 
 function labelForType(type) {
