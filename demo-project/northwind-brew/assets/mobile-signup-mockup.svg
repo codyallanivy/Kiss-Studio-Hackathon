@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 720" role="img" aria-label="Northwind Brew mobile signup mockup">
+  <defs>
+    <linearGradient id="screen" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff7e8"/>
+      <stop offset="1" stop-color="#ecd1a2"/>
+    </linearGradient>
+    <filter id="phoneShadow">
+      <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#2d1b13" flood-opacity=".24"/>
+    </filter>
+  </defs>
+  <rect width="520" height="720" rx="34" fill="#6b8b65"/>
+  <rect x="98" y="44" width="324" height="632" rx="42" fill="#1f1712" filter="url(#phoneShadow)"/>
+  <rect x="119" y="74" width="282" height="572" rx="30" fill="url(#screen)"/>
+  <rect x="214" y="92" width="92" height="9" rx="5" fill="#4a3426" opacity=".6"/>
+  <circle cx="260" cy="174" r="58" fill="#2d1b13"/>
+  <path d="M229 176c0-31 25-55 56-55s56 24 56 55v15c0 30-24 54-54 54h-5c-30 0-53-24-53-54z" transform="scale(.68) translate(112 52)" fill="#8f5a36"/>
+  <text x="260" y="270" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#2d1b13">Northwind</text>
+  <text x="260" y="310" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#2d1b13">Brew</text>
+  <text x="260" y="354" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" fill="#6f3f25">Opening soon near you.</text>
+  <rect x="151" y="396" width="218" height="48" rx="24" fill="#fffaf0" stroke="#d8b06e"/>
+  <text x="178" y="426" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" fill="#8d715b">you@example.com</text>
+  <rect x="151" y="460" width="218" height="52" rx="26" fill="#2d1b13"/>
+  <text x="260" y="493" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#fff7e8">Join the launch list</text>
+  <rect x="153" y="548" width="214" height="52" rx="16" fill="#f7e0b8"/>
+  <text x="176" y="579" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#2d1b13">Featured: Harbor Roast</text>
+</svg>
+

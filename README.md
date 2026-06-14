@@ -40,13 +40,25 @@ The important design choice is that Foundry is the reasoning/model tier, but KIS
 Recommended 5-minute recording:
 
 1. Open Builder Studio and show the visual builder hook.
-2. Return to Command Center and show the real control layer.
-3. Ask a project-scoped question and show citations.
-4. Switch projects and prove unrelated memory does not leak.
-5. Generate one gallery asset and show reference search plus generation mode.
-6. Run a scope gate and show Tier/WARN/BLOCK governance.
+2. Click **Reveal Command Center** and show the real control layer.
+3. Use the prepared `northwind-brew` project.
+4. Ask a project-scoped question and show citations.
+5. Run a scope gate and show Tier/WARN/BLOCK governance.
+6. Show the Creative Studio vision board and foundation asset gallery.
 
 See `DEMO_SCRIPT.md` for a timed script.
+
+## Prepared Demo Project
+
+`demo-project/northwind-brew` is the recommended recording project. It is a polished neighborhood coffee brand landing-page example with:
+
+- Scoped KISS memory files
+- Tier 1 launch-page scope
+- A useful board, health state, and decision log
+- A vision board
+- Starter foundation assets for the gallery
+
+Use it for the recorded demo instead of creating a new project live.
 
 ## Quick Start
 
@@ -105,4 +117,3 @@ If `AZURE_AI_IMAGE_DEPLOYMENT` is empty, gallery assets still improve through Fo
 ## Thesis Origin
 
 This project comes from the DigitalQuill Labs thesis: AI should create value, not just output. The product is not anti-AI; it is anti-waste. It keeps goals, context, decisions, risk, and compute usage visible so builders can keep the human client in control.
-

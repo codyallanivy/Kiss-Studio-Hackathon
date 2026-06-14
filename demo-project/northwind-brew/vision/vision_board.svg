@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" role="img" aria-label="Northwind Brew vision board">
+  <defs>
+    <linearGradient id="boardBg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff7e8"/>
+      <stop offset=".55" stop-color="#f4d7a3"/>
+      <stop offset="1" stop-color="#6b8b65"/>
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#2d1b13" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1100" height="720" rx="36" fill="url(#boardBg)"/>
+  <text x="58" y="76" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" letter-spacing="4" font-weight="700" fill="#2d1b13">VISION BOARD</text>
+  <text x="58" y="136" font-family="Georgia, serif" font-size="58" font-weight="700" fill="#2d1b13">Northwind Brew launch page</text>
+  <text x="58" y="176" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#5f4937">A warm one-page site with one clear signup action.</text>
+  <g transform="translate(58 236)" filter="url(#cardShadow)">
+    <rect width="290" height="360" rx="26" fill="#fffaf0"/>
+    <circle cx="145" cy="112" r="62" fill="#2d1b13"/>
+    <path d="M109 116c0-36 29-65 65-65s65 29 65 65v18c0 34-28 62-62 62h-6c-34 0-62-28-62-62z" transform="scale(.65) translate(84 68)" fill="#8f5a36"/>
+    <text x="145" y="214" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#2d1b13">Logo</text>
+    <text x="145" y="250" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" fill="#6f3f25">small, readable, warm</text>
+    <rect x="58" y="294" width="174" height="42" rx="21" fill="#6b8b65"/>
+    <text x="145" y="321" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#fff7e8">brand anchor</text>
+  </g>
+  <g transform="translate(390 236)" filter="url(#cardShadow)">
+    <rect width="290" height="360" rx="26" fill="#2d1b13"/>
+    <text x="42" y="78" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" letter-spacing="3" fill="#d9a55d" font-weight="700">HERO</text>
+    <text x="42" y="136" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#fff7e8">Start your</text>
+    <text x="42" y="184" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#fff7e8">morning close</text>
+    <text x="42" y="232" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#fff7e8">to home.</text>
+    <rect x="42" y="282" width="160" height="44" rx="22" fill="#d9a55d"/>
+    <text x="122" y="310" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#2d1b13">Join the list</text>
+  </g>
+  <g transform="translate(722 236)" filter="url(#cardShadow)">
+    <rect width="290" height="360" rx="26" fill="#fffaf0"/>
+    <text x="40" y="78" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" letter-spacing="3" fill="#6b8b65" font-weight="700">SCOPE</text>
+    <text x="40" y="126" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#2d1b13">Tier 1 only</text>
+    <text x="40" y="176" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#6f3f25">Landing page</text>
+    <text x="40" y="214" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#6f3f25">Signup action</text>
+    <text x="40" y="252" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#6f3f25">Foundation assets</text>
+    <line x1="40" y1="284" x2="230" y2="284" stroke="#d9a55d" stroke-width="3"/>
+    <text x="40" y="326" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" fill="#8a3b25">Park checkout and rewards</text>
+  </g>
+</svg>
+

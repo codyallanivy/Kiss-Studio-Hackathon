@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-label="Northwind Brew roast card">
+  <rect width="640" height="440" rx="32" fill="#2d1b13"/>
+  <rect x="34" y="34" width="572" height="372" rx="24" fill="#fff7e8"/>
+  <circle cx="492" cy="134" r="78" fill="#d9a55d"/>
+  <path d="M451 132c26-42 56-42 82 0-24 24-55 24-82 0z" fill="#6f3f25"/>
+  <path d="M493 77c-16 25-16 49 0 72" fill="none" stroke="#2d1b13" stroke-width="9" stroke-linecap="round"/>
+  <text x="72" y="96" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" letter-spacing="4" font-weight="700" fill="#6b8b65">FEATURED ROAST</text>
+  <text x="72" y="162" font-family="Georgia, serif" font-size="50" font-weight="700" fill="#2d1b13">Harbor Roast</text>
+  <text x="72" y="215" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" fill="#6f3f25">Cocoa, toasted almond, and a clean finish.</text>
+  <rect x="72" y="274" width="164" height="46" rx="23" fill="#6b8b65"/>
+  <text x="154" y="304" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#fff7e8">Launch blend</text>
+  <rect x="254" y="274" width="176" height="46" rx="23" fill="#f2dcc1" stroke="#d9a55d"/>
+  <text x="342" y="304" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#2d1b13">Medium roast</text>
+  <text x="72" y="365" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#5f4937">Good for a signup card, product tile, or Builder Studio section.</text>
+</svg>
+

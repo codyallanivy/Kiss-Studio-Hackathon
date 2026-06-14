@@ -231,11 +231,11 @@ function tab(v){
   if(v==="v3"){ loadGallery(); loadVision(); $("ccproj").textContent = ACTIVE; }
 }
 function loadJudgeDemo(){
-  if($("scopein")) $("scopein").value = "Add blockchain payment integration";
-  if($("ccin")) $("ccin").value = "survey me: a local coffee shop brand that needs a logo, tagline, and a one-page site";
-  if($("heroin")) $("heroin").value = "Summarize this project's scope, blockers, and next best work";
+  if($("scopein")) $("scopein").value = "Add ecommerce checkout, loyalty rewards, and local delivery tracking.";
+  if($("ccin")) $("ccin").value = "logo: warm neighborhood coffee brand mark for a beginner-friendly landing page";
+  if($("heroin")) $("heroin").value = "What is this project about, and what is Tier 1 scope?";
   tab('v2');
-  if($("statusline")) $("statusline").textContent = "Judge demo loaded — Scope Gate (BLOCK example) and Creative intake prefilled";
+  if($("statusline")) $("statusline").textContent = "Judge demo loaded - scoped memory, scope gate, and asset prompt are ready";
 }
 async function safe(fn){ try{ await fn(); }catch(e){ console.warn(fn.name, e); } }
 async function status(){

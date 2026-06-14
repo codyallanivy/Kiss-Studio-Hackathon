@@ -1,94 +1,168 @@
 # 5-Minute Demo Script
 
-## 0:00-0:25 - Problem
+Use the prepared project `northwind-brew`. Do not create a new project during the recording. The goal is to show the full governed workflow quickly.
 
-"AI builders are powerful, but most workflows still lose context between sessions, mix project memory, and spend tokens creating output that may not move the project forward. KISS Studio is a local-first command center for AI-assisted building."
+## Setup
 
-"This came from my DigitalQuill Labs thesis: I am not anti-AI; I am anti-waste. The goal is to help builders keep durable context, clear decisions, and intentional compute use."
+Open these before recording:
+
+1. `http://localhost:8765/builder`
+2. `http://localhost:8765`
+3. Teams governance mock, if you are using it
+
+Confirm the Command Center shows:
+
+- Active project: `northwind-brew`
+- Model: `foundry:gpt-4o`
+- Gallery assets visible in Creative Studio
+
+## 0:00-0:25 - Open With The Problem
+
+Say:
+
+"Most AI builder demos show output. The problem is what happens around the output. Context gets scattered, projects borrow the wrong memory, and models spend tokens before the work is actually scoped. KISS Studio is my answer to that: a local-first builder where AI work stays grounded, governed, and auditable."
 
 ## 0:25-1:00 - Builder Studio Hook
 
-Open Builder Studio.
+Show Builder Studio.
 
-"At first this looks like another AI website builder. You can plan, build, inspect components, edit styles, and move toward code and testing."
+Point at Plan, Build, Code, Test, Export.
 
-Show the build space briefly.
+Say:
 
-"But the real differentiator is not just the canvas. It is the command layer underneath."
+"I start here because this is the beginner-friendly front door. A user can describe an idea, get a plan, edit visually, inspect components, change styles, move into code, and test the result. So at first glance, it looks like a visual website builder."
 
-Go back to Command Center.
+Pause, then point at the Reveal Command Center button.
 
-## 1:00-1:50 - Command Center Reveal
+"But the important part is underneath. This button reveals the command layer that keeps the build under control."
 
-Show the project selector, model selector, and Foundry badge.
+Click **Reveal Command Center**.
 
-"Each project has its own memory and files. When I switch projects, the system should not retrieve another project's context. Foundry is the reasoning layer, but KISS controls what memory Foundry is allowed to see."
+## 1:00-1:45 - Reveal The Operating Layer
 
-## 1:50-2:35 - Scoped Memory Demo
+Show Command Center.
 
-Select `northwind-brew`.
+Point at the Foundry model badge, project selector, and dashboard panels.
 
-Ask:
+Say:
+
+"This is the operating layer. The active project is Northwind Brew, a prepared coffee-brand landing page. Foundry is connected as the reasoning tier, but KISS controls what project memory the model can use, what scope rules apply, and what gets logged."
+
+Then say the IQ line:
+
+"The IQ story is simple: Foundry IQ grounds answers in project knowledge, Fabric IQ turns requests into scope decisions, and Work IQ makes the work visible through readiness, health, and verification signals."
+
+## 1:45-2:30 - Live Action 1: Scoped Memory
+
+Use the Assistant or Project Ops chat.
+
+Prompt:
 
 ```text
 What is this project about, and what is Tier 1 scope?
 ```
 
-Point to citations from `northwind-brew`.
+Say while it answers:
 
-Switch to `pizza-shop`.
+"I am not asking for a generic marketing answer. I want the system to read the active project's files and explain the current scope."
 
-Ask:
+Point at citations.
 
-```text
-What do you know about Ember Tides, NPCs, or the Drowned Shrine in this project?
-```
+Say:
 
-Expected point:
+"The important detail is the citations. The answer is grounded in Northwind Brew's own memory, not another project and not a random chat history."
 
-"It refuses to pull fantasy memory into the active project. This is reliability and safety at the retrieval layer."
-
-## 2:35-3:25 - Reference-Grounded Gallery Asset
-
-Go to Creative Studio or gallery.
-
-Add an asset:
+Optional safety prompt, only if you have time:
 
 ```text
-logo
-warm neighborhood coffee brand mark for a beginner-friendly landing page
+What do you know about Ember Tides or NPCs in this project?
 ```
 
-Point out:
+Say:
 
-- Reference search runs before generation
-- The result includes citations
-- Mode is `foundry-svg` or `foundry-image` if Azure image deployment is configured
-- Offline fallback still works
+"This is the safety check. If unrelated project memory appears here, the system is not safe enough. It should keep the active project isolated."
 
-## 3:25-4:15 - Scope Gate
+## 2:30-3:20 - Live Action 2: Scope Gate
 
-Use the scope gate:
+Go to Scope Gate.
+
+Prompt:
 
 ```text
-Add delivery tracking, analytics dashboard, and a customer rewards app.
+Add ecommerce checkout, loyalty rewards, and local delivery tracking.
 ```
 
-Expected point:
+Say:
 
-"Instead of just building everything, KISS classifies scope, parks Tier 2/3 work, and protects the sprint."
+"This is where the system behaves differently from a normal AI builder. A normal assistant might start building all of this. KISS checks the project vision first."
 
-## 4:15-4:45 - Model Ladder
+Point at verdict and tier.
 
-Show the model selector:
+Say:
 
-- Foundry for strongest reasoning
-- Ollama for local/private/cheaper use
-- Offline for deterministic fallback
+"For Northwind Brew, Tier 1 is only the landing page, signup action, and foundation assets. Ecommerce, rewards, and delivery tracking sound useful, but they are not this sprint. The system warns or blocks and parks the request instead of spending time and tokens on the wrong work."
 
-"This makes the workflow usable even when cloud tokens are off, while Foundry enhances reasoning and asset generation when available."
+## 3:20-4:10 - Live Action 3: Creative Studio Assets
 
-## 4:45-5:00 - Close
+Go to Creative Studio.
 
-"Most AI coding demos show output. KISS Studio shows the operating system around output: memory, scope, decisions, verification, assets, and model choice. It is a builder for people who want ideas finished, not scattered across forgotten chats."
+Show the vision board and asset gallery.
+
+Say:
+
+"Now the same governance loop applies to creative work. This project already has a logo mark, hero composition, mobile signup mockup, palette card, and product card. These are not just decoration; they are foundation assets grounded in the project brief."
+
+Click add asset if you want one live action.
+
+Prompt:
+
+```text
+logo: warm neighborhood coffee brand mark for a beginner-friendly landing page
+```
+
+Say:
+
+"Before creating an asset, the system searches the project references. If Foundry is on, it can use the model for a better SVG direction. If cloud tokens are off, the offline path still keeps the demo reliable."
+
+## 4:10-4:35 - Optional M365 Governance Payoff
+
+Show the Teams or M365 governance mock.
+
+Say:
+
+"This is the manager-facing payoff. The mock is not pretending to be live tenant data. It is a demo surface built from reasoning outputs and synthetic work signals, so a manager can see what was blocked, why, and where verification debt is building."
+
+## 4:35-5:00 - Close
+
+Say:
+
+"KISS Studio turns AI output into governed project work. The visual builder helps beginners start. The Command Center keeps memory, scope, decisions, verification, assets, and model choice under control. That is the thesis behind DigitalQuill Labs: help people build with AI without losing context, scope, or ownership."
+
+## Backup Prompts
+
+Use these if a live step fails:
+
+```text
+What is this project about, and what is Tier 1 scope?
+```
+
+```text
+Add ecommerce checkout, loyalty rewards, and local delivery tracking.
+```
+
+```text
+Summarize this project's blockers and next best work.
+```
+
+```text
+logo: warm neighborhood coffee brand mark for a beginner-friendly landing page
+```
+
+## What Not To Do
+
+- Do not create a new project live.
+- Do not explain every panel.
+- Do not mention the old fantasy template unless asked.
+- Do not spend time debugging asset generation on camera.
+- Do not say "the AI refused." Say "the system governed the request."
 
