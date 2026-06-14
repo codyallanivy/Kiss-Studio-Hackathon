@@ -1,3 +1,4 @@
+https://youtu.be/tsYCeuhnZqE
 # KISS Studio - Agents League Submission
 
 KISS Studio is a local-first command center for AI-assisted builders. It combines a beginner-friendly Builder Studio with a project memory and governance layer that keeps AI work scoped, cited, and tied to real project value.
