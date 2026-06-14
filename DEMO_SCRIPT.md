@@ -12,7 +12,6 @@ Pause, then point at the Reveal Command Center button.
 
 "This is the operating layer. The active project is Northwind Brew, a prepared coffee-brand landing page. Foundry is connected as the reasoning tier, but KISS controls what project memory the model can use, what scope rules apply, and what gets logged."
 
-Then say the IQ line:
 
 "The IQ story is simple: Foundry IQ grounds answers in project knowledge, Fabric IQ turns requests into scope decisions, and Work IQ makes the work visible through readiness, health, and verification signals."
 
